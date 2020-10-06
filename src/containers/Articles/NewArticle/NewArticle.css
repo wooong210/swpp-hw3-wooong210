@@ -1,0 +1,11 @@
+
+.NewArticle input,
+.NewArticle textarea {
+  display: block;
+  width: 80%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  outline: none;
+  font: inherit;
+  margin: auto;
+}
