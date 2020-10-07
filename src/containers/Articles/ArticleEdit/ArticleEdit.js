@@ -61,11 +61,11 @@ class ArticleEdit extends Component {
 				</textarea>
 			</div>}
 			<button
-				id="back-Edit-article-button"
+				id="back-edit-article-button"
 				onClick={() => this.clickBackEditArticleHandler()}
 			>back to article</button>
 			<button
-				id="confirm-Edit-article-button"
+				id="confirm-edit-article-button"
 				onClick={() => this.clickConfirmEditArticleHandler()}
 				disabled={(this.state.content && this.state.title) ? '' : 'disabled'}
 			>confirm</button>

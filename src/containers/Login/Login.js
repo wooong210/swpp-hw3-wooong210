@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../store/actions/index';
-
+import './Login.css';
 class Login extends Component {
 	state = {
 		email: '',
@@ -36,7 +36,7 @@ class Login extends Component {
 		<div className="Login">
 			<h1>Login in hw3</h1>
 			<div className="login-email">
-				<label>email</label>
+				<label>email   </label>
 				<input
 					id="email-input"
 					type="text"
@@ -45,7 +45,7 @@ class Login extends Component {
 				></input>
 			</div>
 			<div className="login-password">
-				<label>password</label>
+				<label>password </label>
 				<input
 					id="pw-input"
 					type="text"
@@ -53,7 +53,7 @@ class Login extends Component {
 					onChange={(event) => this.setState({ password: event.target.value })}
 				></input>
 			</div>
-			<button id="login-button" onClick={() => this.clickLoginHandler()}>Login</button>
+			<button id="login-button" className="login-button" onClick={() => this.clickLoginHandler()}>Login</button>
 		</div>
 		);
 	}

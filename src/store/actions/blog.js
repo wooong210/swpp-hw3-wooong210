@@ -27,8 +27,10 @@ export const postArticle_ = (atc) => {
 export const postArticle = (atc) => {
 	return (dispatch) => {
 		return axios.post('/api/articles/', atc)
-			.then(res => dispatch(postArticle_(res.data)))
-			.then(res => dispatch(push('/articles/' + res.id)))
+			.then(res => {
+				dispatch(postArticle_(res.data));
+				dispatch(push('/articles/' + res.data.id));
+			})
 			.catch(error => console.log(error.response.data));
 	};
 };
@@ -61,8 +63,10 @@ export const editArticle_ = (atc) => {
 export const editArticle = (atc) => {
 	return (dispatch) => {
 		return axios.put('/api/articles/' + atc.id, atc)
-			.then(res => dispatch(editArticle_(res.data)))
-			.then(res => dispatch(push('/articles/' + res.id)))
+			.then(res => {
+				dispatch(editArticle_(res.data));
+				dispatch(push('/articles/' + res.data.id));
+			})
 			.catch(error => console.log(error.response.data));
 	}
 }

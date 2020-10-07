@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import ArticleList from '../../components/ArticleList/ArticleList';
 import * as actionCreators from '../../store/actions/index';
+import './style.css';
 
 class Articles extends Component {
 	state = {
@@ -41,13 +42,10 @@ class Articles extends Component {
 
 		return (
 			<div className="Articles">
-				{/* <div className='title'>
-					{this.props.title}
-				</div> */}
 				<div className='atcs'>
 					{atcs}
 				</div>
-				<button id="create-article-button" onClick={() => this.clickCreateHandler()}> new article </button>
+				<button id="create-article-button" className="button" onClick={() => this.clickCreateHandler()}> new article </button>
 			</div>
 		)
 	}

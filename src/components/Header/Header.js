@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from '../../store/actions/index';
 import { withRouter } from 'react-router';
+import './Header.css';
 
 class Header extends Component {
 
@@ -18,7 +19,7 @@ class Header extends Component {
 	render(){
 		return (
 			<div>
-				{this.props.logged_in && <button id="logout-button" onClick={() => this.clickLogoutHandler()}>Logout</button>}
+				{this.props.logged_in && <button id="logout-button" className="logout-button" onClick={() => this.clickLogoutHandler()}>Logout</button>}
 			</div>
 		);
 	}

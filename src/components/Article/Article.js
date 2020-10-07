@@ -1,8 +1,9 @@
 import React from 'react';
+import './Article.css';
 
 const Article = (props) => {
 	return (
-		<div className="Article">
+		<div className="article">
 			<h3 id="article-title">{props.title}</h3>
 			<h5 id="article-author">{props.author}</h5>
 			<p id="article-content">{props.content}</p>

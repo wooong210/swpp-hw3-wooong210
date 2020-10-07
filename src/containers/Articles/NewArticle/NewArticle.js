@@ -16,7 +16,7 @@ class NewArticle extends Component {
 		this.props.onGetLoginStatus(1);
 		if(!this.props.logged_in) this.props.history.push('/login');
 		if(!this.props.userDict) this.props.onGetUsersName();
-		console.log(this.props.userDict)
+		this.setState({	author_id: this.props.user_id });
 	}
 
 	clickBackCreateArticleHandler = () => {
@@ -32,7 +32,6 @@ class NewArticle extends Component {
 	clickPreviewTabHandler = () => {
 		this.setState({
 			preview: true,
-			author_id: this.props.user_id,
 		});
 	}
 
@@ -54,8 +53,10 @@ class NewArticle extends Component {
 					onChange={(event) => this.setState({ title: event.target.value })}
 				></input>
 				<label>content</label>
-				<textarea rows="4" type="text" value={this.state.content}
-				onChange={(event) => this.setState({ content: event.target.value })}>
+				<textarea rows="4" type="text"
+					id="article-content-input"
+					value={this.state.content}
+					onChange={(event) => this.setState({ content: event.target.value })}>
 				</textarea>
 			</div>}
 			<button

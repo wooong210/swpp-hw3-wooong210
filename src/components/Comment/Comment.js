@@ -1,8 +1,9 @@
 import React from 'react';
+import './Comment.css';
 
 const Comment = (props) => {
 	return (
-		<div className="Comment">
+		<div className="comment">
 			<p id="comment-content">{props.content}</p>
 			<p id="comment-author">{props.author}</p>
 			{props.author_id === props.user_id &&
