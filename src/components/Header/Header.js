@@ -18,7 +18,7 @@ class Header extends Component {
 
 	render(){
 		return (
-			<div>
+			<div className="header">
 				{this.props.logged_in && <button id="logout-button" className="logout-button" onClick={() => this.clickLogoutHandler()}>Logout</button>}
 			</div>
 		);

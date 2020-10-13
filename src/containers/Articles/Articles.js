@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import ArticleList from '../../components/ArticleList/ArticleList';
 import * as actionCreators from '../../store/actions/index';
-import './style.css';
 
 class Articles extends Component {
 	state = {
