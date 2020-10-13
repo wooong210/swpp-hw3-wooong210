@@ -9,8 +9,7 @@ export const getArticles_ = (articles) => {
 export const getArticles = () => {
 	return (dispatch) => {
 		return axios.get('/api/articles')
-			.then(res => dispatch(getArticles_(res.data)))
-			.catch(error => console.log(error.response.data));
+			.then(res => dispatch(getArticles_(res.data)));
 		};
 }
 
@@ -30,8 +29,7 @@ export const postArticle = (atc) => {
 			.then(res => {
 				dispatch(postArticle_(res.data));
 				dispatch(push('/articles/' + res.data.id));
-			})
-			.catch(error => console.log(error.response.data));
+			});
 	};
 };
 
@@ -45,8 +43,7 @@ export const getArticle_ = (atc) => {
 export const getArticle = (id) => {
 	return (dispatch) => {
 		return axios.get('/api/articles/'+ id)
-			.then(res => dispatch(getArticle_(res.data)))
-			.catch(error => console.log(error.response.data));
+			.then(res => dispatch(getArticle_(res.data)));
 	};
 };
 
@@ -66,8 +63,7 @@ export const editArticle = (atc) => {
 			.then(res => {
 				dispatch(editArticle_(res.data));
 				dispatch(push('/articles/' + res.data.id));
-			})
-			.catch(error => console.log(error.response.data));
+			});
 	}
 }
 

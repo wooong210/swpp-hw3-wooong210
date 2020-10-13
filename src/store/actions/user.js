@@ -15,7 +15,6 @@ export const userLogin = (id) => {
 	};
 };
 
-
 export const userLogout_ = () => {
 	return {
 		type: actionTypes.LOGOUT,

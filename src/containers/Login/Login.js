@@ -11,9 +11,6 @@ class Login extends Component {
 	componentDidMount() {
 		this.props.onGetLoginStatus(1);
 		if(!this.props.userDict) this.props.onGetUsersName();
-	}
-
-	componentDidUpdate() {
 		if(this.props.logged_in)
 			this.props.history.push('/articles');
 	}
