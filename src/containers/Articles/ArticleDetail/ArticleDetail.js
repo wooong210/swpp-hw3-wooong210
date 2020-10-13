@@ -7,6 +7,7 @@ import Comment from '../../../components/Comment/Comment';
 class ArticleDetail extends Component {
 	state = {
 		newComment: "",
+		user_id: 1,
 	}
 
 	componentDidMount() {
@@ -74,13 +75,6 @@ class ArticleDetail extends Component {
 					author= {(this.props.userDict) ? this.props.userDict[author_id] : ""}
 					title= {title}
 					content= {content}
-					// author_id= {author_id}
-					// user_id= {user_id}
-					// id= {id}
-					// onClickEdit= {() => this.props.history.push('/articles/' + id + '/edit') }
-					// onClickDelete= {() => {this.props.onDeleteArticle(id);
-					// 						this.props.history.push('/articles');}}
-					// onClickGoBack= {() => this.props.history.push('/articles') }
 				/>
 				</div>
 

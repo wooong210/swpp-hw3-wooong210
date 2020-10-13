@@ -40,14 +40,14 @@ class ArticleEdit extends Component {
 
 	render() {
 		return(
-		<div className="NewArticle">
+		<div className="EditArticle">
 			{this.state.preview ?
 			<Article
 				author= {(this.props.userDict) ? this.props.userDict[this.state.author_id] : ""}
 				title= {this.state.title}
 				content= {this.state.content}
 			/> :
-			<div className="NewArticleInput">
+			<div className="EditArticleInput">
 				<label>title</label>
 				<input
 					id="article-title-input"
@@ -56,7 +56,11 @@ class ArticleEdit extends Component {
 					onChange={(event) => this.setState({ title: event.target.value })}
 				></input>
 				<label>content</label>
-				<textarea rows="4" type="text" value={this.state.content}
+				<textarea
+				id="article-content-input"
+				rows="4"
+				type="text"
+				value={this.state.content}
 				onChange={(event) => this.setState({ content: event.target.value })}>
 				</textarea>
 			</div>}
